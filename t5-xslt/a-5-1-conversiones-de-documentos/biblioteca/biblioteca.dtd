@@ -1,0 +1,43 @@
+<!ELEMENT biblioteca (libros, usuarios, prestamos)>
+
+<!-- LIBROS -->
+<!ELEMENT libros (libro+)>
+
+<!ELEMENT libro (titulo, autor+, anio, editorial)>
+<!ATTLIST libro
+    id ID #REQUIRED
+    categoria CDATA #IMPLIED
+>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+
+<!-- USUARIOS -->
+<!ELEMENT usuarios (usuario+)>
+
+<!ELEMENT usuario (nombre, apellidos, email)>
+<!ATTLIST usuario
+    id ID #REQUIRED
+    tipo CDATA #IMPLIED
+>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!-- PRESTAMOS -->
+<!ELEMENT prestamos (prestamo+)>
+
+<!ELEMENT prestamo (fechaInicio, fechaDevolucion?, libroRef+)>
+<!ATTLIST prestamo
+    id ID #REQUIRED
+    usuario IDREF #REQUIRED
+>
+
+<!ELEMENT fechaInicio (#PCDATA)>
+<!ELEMENT fechaDevolucion (#PCDATA)>
+
+<!ELEMENT libroRef EMPTY>
+<!ATTLIST libroRef ref IDREF #REQUIRED>

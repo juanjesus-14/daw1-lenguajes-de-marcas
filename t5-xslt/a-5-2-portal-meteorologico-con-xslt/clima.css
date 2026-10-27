@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    margin:0;
+    padding:30px;
+}
+
+.contenedor{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#1d3557;
+    margin-bottom:10px;
+    font-size:40px;
+}
+
+.fecha{
+    text-align:center;
+    color:#555;
+    margin-bottom:40px;
+}
+
+.tarjetas{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.tarjeta{
+    background:white;
+    width:300px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.tarjeta:hover{
+    transform:translateY(-5px);
+}
+
+.caliente{
+    border-top:5px solid orange;
+}
+
+.fria{
+    border-top:5px solid #3498db;
+}
+
+h2{
+    margin:0;
+    color:#1d3557;
+}
+
+h3{
+    margin-top:5px;
+    color:#777;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+p{
+    margin:10px 0;
+    line-height:1.5;
+}
+
+.peligro{
+    color:red;
+    font-weight:bold;
+    background:#ffe5e5;
+    padding:5px 10px;
+    border-radius:6px;
+}
+
+.normal{
+    color:#2d6a4f;
+    font-weight:bold;
+}
