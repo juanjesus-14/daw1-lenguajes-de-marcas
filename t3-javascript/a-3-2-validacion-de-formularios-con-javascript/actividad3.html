@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Elemento raíz del documento.
+     lang="en" indica que el idioma es inglés -->
+
+<head>
+    <!-- Contiene metadatos e información no visible -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar correctamente caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable (responsive) -->
+
+    <title>Formulario 3</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <script src="actividad3.js"></script>
+    <!-- Archivo JavaScript externo con la validación -->
+</head>
+
+<body>
+
+    <form name="fvalida">
+    <!-- Formulario.
+         Aquí se usa el atributo name en lugar de id.
+         Esto permite acceder desde JS como document.fvalida -->
+
+<table>
+<!-- Se usa una tabla para organizar visualmente el formulario -->
+
+<tr>
+    <td>Nombre: </td>
+    <td>
+        <input type="text" name="nombre" size="30" maxlength="100">
+        <!-- Campo de texto.
+             size define el ancho visible.
+             maxlength limita a 100 caracteres -->
+    </td>
+</tr>
+
+<tr>
+    <td>Edad: </td>
+    <td>
+        <input type="text" name="edad" size="3" maxlength="2">
+        <!-- Campo de texto para edad.
+             maxlength=2 limita a dos cifras -->
+    </td>
+</tr>
+
+<tr>
+    <td>Interés:</td>
+    <td>
+        <select name=interes>
+        <!-- Menú desplegable -->
+
+        <option value="Elegir">Elegir
+        <option value="Comercial">Contacto comercial
+        <option value="Clientes">Atención al cliente
+        <option value="Proveedores">Contacto de proveedores
+        <!-- Opciones disponibles -->
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <!-- colspan="2" une dos columnas.
+             align="center" centra el contenido -->
+
+        <input type="button" value="Enviar" onclick="valida_envia()">
+        <!-- Botón tipo button (NO submit).
+             Llama a la función valida_envia() al hacer clic -->
+    </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento.
+     lang="es" indica que el idioma es español -->
+
+<head>
+    <!-- Contiene información no visible directamente -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar correctamente tildes y caracteres especiales -->
+
+    <title>Formulario de registro - Mi web</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- Contenido visible de la página -->
+
+    <h1>Formulario de registro</h1>
+    <!-- Título principal -->
+
+    <form action="" method="post" id="Formulario">
+        <!-- Formulario.
+             action="" indica que no se envía a ningún archivo específico.
+             method="post" envía los datos de forma oculta.
+             id permite manipular el formulario con JavaScript -->
+
+        <p>
+            <label for="nombre">Nombre:</label>
+            <!-- Etiqueta asociada al input mediante el atributo for -->
+
+            <input type="text" name="nombre" id="nombre" maxlength="50">
+            <!-- Campo de texto.
+                 maxlength limita a 50 caracteres -->
+        </p>
+
+        <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" maxlength="50">
+        </p>
+
+        <p>
+            Sexo:
+            <!-- Grupo de botones radio (solo se puede elegir uno) -->
+
+            <input type="radio" name="sexo" id="sexo-h" value="h">
+            <!-- name igual en ambos radio → forman grupo -->
+
+            <label for="sexo-h">Hombre</label>
+
+            <input type="radio" name="sexo" id="sexo-m" value="m">
+            <label for="sexo-m">Mujer</label>
+        </p>
+
+        <p>
+            <label for="correo">Correo:</label>
+            <input type="text" name="correo" id="correo" maxlength="100">
+            <!-- Campo para email (aunque sería mejor usar type="email") -->
+        </p>
+
+        <p>
+            <label for="poblacion">Población:</label>
+            <!-- Lista desplegable -->
+
+            <select name="poblacion" id="poblacion">
+                <!-- select crea menú desplegable -->
+
+                <option>Alicante</option>
+                <option>Madrid</option>
+                <option>Sevilla</option>
+                <option>Valencia</option>
+                <!-- option son las opciones seleccionables -->
+            </select>
+        </p>
+
+        <p>
+            <label for="descripcion">Descripción:</label><br>
+            <!-- Área de texto multilínea -->
+
+            <textarea name="descripcion" id="descripcion" rows="6" cols="60"></textarea>
+            <!-- rows y cols definen tamaño visible -->
+        </p>
+
+        <p>
+            <input type="checkbox" name="info" id="info" checked>
+            <!-- Casilla de verificación.
+                 checked indica que viene marcada por defecto -->
+
+            <label for="info">
+                Deseo recibir información sobre novedades y ofertas
+            </label>
+        </p>
+
+        <p>
+            <input type="checkbox" name="condiciones" id="condiciones">
+            <!-- Checkbox obligatorio normalmente para validación -->
+
+            <label for="condiciones">
+                Declaro haber leído y acepto las condiciones generales del programa y la normativa sobre protección de datos
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- Botón para enviar el formulario -->
+        </p>
+
+        <!-- MENSAJE DE ERROR ABAJO Y EN NEGRO -->
+        <p id="mensajeError" style="color:black; font-weight:bold;"></p>
+        <!-- Párrafo vacío para mostrar errores desde JavaScript.
+             style aplica estilo en línea (color negro y negrita) -->
+
+    </form>
+
+    <script src="validacion_A_2_3.js"></script>
+    <!-- Archivo JavaScript externo que validará el formulario -->
+</body>
+</html>
+

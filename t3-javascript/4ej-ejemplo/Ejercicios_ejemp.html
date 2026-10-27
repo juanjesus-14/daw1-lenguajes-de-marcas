@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Prácticas JavaScript</title>
+
+  <!-- 
+    Cargamos el archivo JavaScript externo.
+    defer hace que el script se ejecute cuando el HTML ya está cargado.
+  -->
+  <script src="Ejercicios_ejemp.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       PRÁCTICA 1
+  ========================== -->
+  <h1>Práctica 1</h1>
+  <p>Completa los campos y haz clic en Ejecutar.</p>
+
+  <!-- Formulario simple con dos inputs -->
+  <form>
+    <p>
+      <label for="campo1">Campo 1:</label>
+      <!-- Input de texto -->
+      <input type="text" id="campo1">
+    </p>
+
+    <p>
+      <label for="campo2">Campo 2:</label>
+      <input type="text" id="campo2">
+    </p>
+
+    <p>
+      <!-- Botón que llama a la función leeform() del JS -->
+      <input type="button" value="Ejecutar" onclick="leeform()">
+    </p>
+  </form>
+
+  <!-- Aquí se escribirá el resultado -->
+  <div id="resultado1"></div>
+
+  <hr>
+
+  <!-- =========================
+       PRÁCTICA 2
+  ========================== -->
+  <h1>Práctica 2</h1>
+  <p>Recorrido de arrays numéricos</p>
+
+  <!-- 
+    Enlace que llama a la función recorre_simple().
+    return false evita que el enlace recargue la página.
+  -->
+  <a href="#" onclick="recorre_simple(); return false;">Sumar</a>
+
+  <hr>
+
+  <!-- =========================
+       PRÁCTICA 3
+  ========================== -->
+  <h1>Práctica 3</h1>
+  <p>Recorrido de arrays para inyectar HTML</p>
+
+  <a href="#" onclick="mostrar_lista(); return false;">Mostrar lista</a>
+
+  <!-- Lista ordenada donde se insertarán los elementos -->
+  <ol id="lista1"></ol>
+
+  <hr>
+
+  <!-- =========================
+       PRÁCTICA 4
+  ========================== -->
+  <h1>Práctica 4</h1>
+  <p>Recorrido de arrays de tipo clave -> valor</p>
+
+  <a href="#" onclick="mostrar_lista_clave(); return false;">
+    Mostrar lista clave y valor
+  </a>
+
+  <ol id="lista2"></ol>
+
+</body>
+</html>

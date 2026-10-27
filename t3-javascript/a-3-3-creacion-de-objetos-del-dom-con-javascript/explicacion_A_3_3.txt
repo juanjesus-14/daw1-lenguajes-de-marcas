@@ -1,0 +1,13 @@
+A.3.3. Creación de objetos del DOM con JavaScript
+
+La clase oCopo sirve para crear un copo de nieve usando JavaScript. Cada copo es un elemento div que se añade al body del documento.
+
+En el constructor se inicializan las propiedades del copo y se crea el elemento HTML con un tamaño y color determinados.
+
+El método dibujar se usa para cambiar la posición del copo en la pantalla usando las propiedades top y left.
+
+La función iniCopos crea varios copos de nieve con tamaños y posiciones aleatorias y los guarda en un array.
+
+La función iniNevada inicia la nevada al cargar la página, calculando el tamaño de la pantalla y llamando a las funciones necesarias.
+
+La función nevar se encarga de mover los copos hacia abajo y volver a colocarlos arriba cuando llegan al final de la pantalla.

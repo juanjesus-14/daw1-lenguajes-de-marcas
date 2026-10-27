@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Elemento raíz del documento.
+     lang="en" indica que el idioma es inglés -->
+
+<head>
+  <!-- Contiene metadatos -->
+
+  <meta charset="UTF-8">
+  <!-- Permite usar caracteres especiales correctamente -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que la página sea adaptable (responsive) -->
+
+  <title>Validar</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+
+  <form id="formulario" action="pagina.php" method="post">
+    <!-- Formulario.
+         id="formulario" para manipularlo con JS.
+         action="pagina.php" → archivo del servidor que recibirá los datos.
+         method="post" → envía datos de forma no visible en la URL -->
+
+    <label for="nombre">Nombre:</label>
+    <!-- Etiqueta asociada al input nombre -->
+
+    <input type="text" id="nombre" name="nombre">
+    <!-- Campo de texto para el nombre -->
+    <br>
+
+    <label for="email">Email:</label>
+    <!-- Etiqueta asociada al input email -->
+
+    <input type="text" id="email" name="email">
+    <!-- Campo de texto para el correo -->
+    <br>
+
+    <label for="categoria">Categoría:</label>
+    <!-- Etiqueta del desplegable -->
+
+    <select id="categoria" name="categoria">
+      <!-- Menú desplegable -->
+
+      <option value="">Seleccione una opción</option>
+      <!-- Opción por defecto con valor vacío -->
+
+      <option value="1">Opción 1</option>
+      <option value="2">Opción 2</option>
+      <option value="3">Opción 3</option>
+      <!-- Opciones disponibles -->
+    </select>
+    <br>
+
+    <input type="checkbox" id="terminos" name="terminos">
+    <!-- Casilla de verificación -->
+
+    <label for="terminos" class="labelCheck">
+      Acepto los términos y condiciones
+    </label>
+    <!-- Label asociada al checkbox.
+         class permite aplicar estilos CSS -->
+    <br>
+
+    <button type="submit">Enviar</button>
+    <!-- Botón que envía el formulario -->
+
+    <p id="mensajeError"></p>
+    <!-- Párrafo vacío para mostrar mensajes de error desde JavaScript -->
+
+  </form>
+
+  <script src="actividad2.js"></script>
+  <!-- Archivo JavaScript externo para validar el formulario -->
+
+</body>
+
+</html>

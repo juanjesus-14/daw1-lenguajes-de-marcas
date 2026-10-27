@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Elemento raíz del documento.
+     lang="en" indica que el idioma principal es inglés -->
+
+<head>
+    <!-- Contiene metadatos e información no visible -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar correctamente caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsive.
+         width=device-width adapta el ancho al dispositivo.
+         initial-scale=1.0 establece el zoom inicial -->
+
+    <title>Formulario</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <script src="actividad1.js"></script>
+    <!-- Enlaza un archivo JavaScript externo.
+         Se ejecutará cuando el navegador cargue este archivo -->
+</head>
+
+<body>
+    <!-- Contenido visible de la página -->
+
+    <form action="/login.php" id="formulario">
+        <!-- Formulario.
+             action="/login.php" indica que los datos se enviarán a ese archivo del servidor.
+             id permite manipularlo con JavaScript -->
+
+        <p>
+            Usuario:
+            <input type="text" name="usuario" id="usuario">
+            <!-- Campo de texto para introducir el usuario -->
+        </p>
+
+        <p>
+            Clave:
+            <input type="text" name="clave" id="clave">
+            <!-- Campo de texto para la contraseña.
+                 (Lo correcto sería type="password" para ocultar caracteres) -->
+        </p>
+
+        <input type="submit" value="Entrar">
+        <!-- Botón que envía el formulario -->
+    </form>
+
+</body>
+</html>

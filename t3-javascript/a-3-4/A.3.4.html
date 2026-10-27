@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que el documento está escrito en HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento HTML.
+     El atributo lang="es" indica que el idioma es español -->
+
+<head>
+    <!-- Contiene información no visible directamente en la página -->
+
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres.
+         UTF-8 permite usar tildes, ñ y caracteres especiales correctamente -->
+
+    <title>Lista de productos</title>
+    <!-- Título de la página.
+         Es lo que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="A.3.4.css">
+    <!-- Vincula un archivo CSS externo para dar estilos a la página -->
+</head>
+
+<body>
+    <!-- Contiene todo el contenido visible de la página -->
+
+    <h1>Carrito de la compra</h1>
+    <!-- Encabezado principal de la página -->
+
+    <div id="productos"></div>
+    <!-- Contenedor vacío donde se mostrarán los productos.
+         Normalmente se rellena dinámicamente con JavaScript -->
+
+    <div id="total"></div>
+    <!-- Contenedor donde se mostrará el precio total del carrito.
+         También suele rellenarse con JavaScript -->
+
+    <script src="A.3.4.js"></script>
+    <!-- Enlaza un archivo JavaScript externo.
+         Se coloca al final del body para que el HTML cargue primero
+         y después se ejecute el script -->
+</body>
+
+</html>
+<!-- Fin del documento HTML -->

@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    /* Define la fuente del texto.
+       Si no carga Arial, usa cualquier fuente sans-serif */
+
+    margin: 20px;
+    /* Añade un margen exterior de 20px a todo el cuerpo */
+
+    background-color: #f5f5f5;
+    /* Color de fondo gris claro */
+
+    color: #333;
+    /* Color del texto gris oscuro */
+}
+
+h1 {
+    text-align: center;
+    /* Centra el texto del encabezado */
+
+    color: #2c3e50;
+    /* Cambia el color del título principal */
+}
+
+#productos {
+    display: flex;
+    /* Activa Flexbox para organizar los elementos internos */
+
+    flex-direction: column;
+    /* Coloca los elementos en columna (uno debajo del otro) */
+
+    gap: 15px;
+    /* Espacio entre los elementos hijos */
+
+    margin-bottom: 30px;
+    /* Espacio inferior respecto a otros elementos */
+}
+
+#productos div {
+    background-color: #fff;
+    /* Fondo blanco para cada producto */
+
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+
+    padding: 15px;
+    /* Espacio interior */
+
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    /* Sombra ligera para efecto de tarjeta */
+}
+
+#productos h3 {
+    margin-top: 0;
+    /* Elimina el margen superior */
+
+    color: #2980b9;
+    /* Color azul para los títulos de los productos */
+}
+
+hr {
+    border: 0;
+    /* Elimina el borde por defecto */
+
+    border-top: 1px solid #eee;
+    /* Añade una línea superior gris clara */
+
+    margin-top: 10px;
+    /* Espacio superior */
+
+    margin-bottom: 10px;
+    /* Espacio inferior */
+}
+
+#total {
+    background-color: #ecf0f1;
+    /* Fondo gris muy claro */
+
+    border: 1px solid #ccc;
+    /* Borde gris */
+
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+
+    padding: 20px;
+    /* Espacio interior */
+
+    max-width: 400px;
+    /* Ancho máximo */
+
+    margin: 0 auto;
+    /* Centra horizontalmente el bloque */
+
+    text-align: center;
+    /* Centra el texto */
+}
+
+#total h2 {
+    margin-top: 0;
+    /* Elimina el margen superior */
+
+    color: #27ae60;
+    /* Color verde para el total */
+}
