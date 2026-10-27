@@ -1,0 +1,28 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    /*Indica disposición en fila*/
+    flex-wrap: nowrap;
+    /*Indica sólo una línea, sin salto*/
+}
+
+nav a {
+    background-color: violet;
+    color: whitesmoke;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}

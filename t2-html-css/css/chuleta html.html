@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Demo - Layout 2 columnas</title>
+<link rel="stylesheet" href="chuleta css">
+<style>
+/* Pequeños estilos auxiliares para la demo (no sobrescriben el layout principal) */
+.col { box-sizing: border-box; padding: 10px; }
+.izq { float: left; width: 50%; }
+.der { float: left; width: 50%; }
+.clearfix::after { content: ''; display: table; clear: both; }
+.articulo .fecha { font-size: 0.9em; color: #666; margin-bottom: 8px; }
+.especial { font-weight: bold; color: #1f8f3a; }
+</style>
+</head>
+<body>
+<div id="contenedor">
+  <div id="cabecera">
+    <h1>Demo: Layout 2 columnas</h1>
+    <p>Usando <code>layout_2column_solution.css</code></p>
+  </div>
+
+  <ul class="menu" aria-label="Menú principal">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Galería</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+
+  <div id="contenido">
+    <h2>Bienvenido</h2>
+    <p>Este es el contenido principal. Aquí puedes ver cómo se comporta el texto, las imágenes y los enlaces con el CSS aplicado.</p>
+
+    <h3>Artículo de ejemplo</h3>
+    <div class="articulo">
+      <p class="fecha">28 de noviembre de 2025</p>
+      <p>Un párrafo de ejemplo con <span class="especial">texto destacado</span> y un enlace: <a href="#">más información</a>.</p>
+      <!-- Imagen de ejemplo embebida como SVG data URL para que el demo funcione offline -->
+      <img src="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' width='800' height='400'>
+          <rect width='100%25' height='100%25' fill='%23e6f2e6'/>
+          <text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23333'>Imagen de ejemplo</text>
+        </svg>" alt="Imagen de ejemplo" />
+
+      <p>Más contenido para probar márgenes, anchuras y comportamiento responsive. Reduce el ancho de la ventana para ver cómo el menú pasa a vertical.</p>
+    </div>
+
+    <h3>Dos columnas internas (ejemplo)</h3>
+    <div class="clearfix">
+      <div class="col izq">
+        <h4>Columna izquierda</h4>
+        <p>Contenido de la columna izquierda. Prueba a añadir más texto para ver el flujo.</p>
+      </div>
+      <div class="col der">
+        <h4>Columna derecha</h4>
+        <p>Contenido de la columna derecha. Ambas columnas usan float en la demo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="pie">
+    <p>Pie de página — Demo creada para probar CSS de examen.</p>
+  </div>
+</div>
+</body>
+</html>

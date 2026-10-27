@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuleta HTML - Juan Jesús Díaz Garrido</title>
+</head>
+<body>
+
+<!-- ======================= -->
+<!-- 🏗 ESTRUCTURA BÁSICA -->
+<!-- ======================= -->
+
+<!-- Estructura mínima de un documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la página</title>
+</head>
+<body>
+    <!-- Contenido -->
+</body>
+</html>
+
+<!-- ======================= -->
+<!-- 🔤 TEXTO Y FORMATO -->
+<!-- ======================= -->
+
+<b>Negrita</b>
+<i>Cursiva</i>
+<u>Subrayado</u>
+<big>Grande</big>
+<small>Pequeño</small>
+Texto con <sub>subíndice</sub> o <sup>superíndice</sup>
+
+<!-- ======================= -->
+<!-- 🔗 ENLACES -->
+<!-- ======================= -->
+
+<!-- Enlace a una web -->
+<a href="https://ejemplo.com" target="_blank">Ir a ejemplo</a>
+
+<!-- Enlace interno a una parte del documento -->
+<a href="#inicio">Volver al inicio</a>
+<a name="inicio"></a> <!-- Marcador interno -->
+
+<!-- ======================= -->
+<!-- 🖼 IMÁGENES -->
+<!-- ======================= -->
+
+<img src="foto.jpg" alt="Descripción de la imagen" width="200">
+
+<!-- ======================= -->
+<!-- 🎥 MULTIMEDIA -->
+<!-- ======================= -->
+
+<!-- Video con controles -->
+<video controls poster="imagen.jpg" width="350">
+    <source src="video.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+</video>
+
+<!-- Audio con controles -->
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+<!-- ======================= -->
+<!-- 📋 LISTAS -->
+<!-- ======================= -->
+
+<!-- Lista no ordenada -->
+<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+</ul>
+
+<!-- Lista ordenada -->
+<ol>
+    <li>Primero</li>
+    <li>Segundo</li>
+</ol>
+
+<!-- ======================= -->
+<!-- 🧾 TABLAS -->
+<!-- ======================= -->
+
+<table border="1">
+    <tr>
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+    </tr>
+    <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+    </tr>
+    <tr>
+        <td colspan="2">Celda combinada</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Celda vertical</td>
+        <td>Otra celda</td>
+    </tr>
+</table>
+
+<!-- ======================= -->
+<!-- 🧍‍♂️ FORMULARIOS -->
+<!-- ======================= -->
+
+<form action="" method="POST">
+
+    <!-- Campo de texto -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <!-- Botones de opción (radio) -->
+    <label>Sexo:</label>
+    <input type="radio" name="sexo" value="hombre"> Hombre
+    <input type="radio" name="sexo" value="mujer"> Mujer<br><br>
+
+    <!-- Menú desplegable -->
+    <label for="poblacion">Población:</label>
+    <select id="poblacion" name="poblacion">
+        <option value="Madrid">Madrid</option>
+        <option value="Valencia">Valencia</option>
+    </select><br><br>
+
+    <!-- Área de texto -->
+    <textarea name="descripcion" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Casilla de verificación -->
+    <input type="checkbox" name="condiciones"> Acepto condiciones<br><br>
+
+    <!-- Botón de envío -->
+    <input type="submit" value="Enviar">
+</form>
+
+<!-- ======================= -->
+<!-- 🎨 ESTILO INTERNO (CSS) -->
+<!-- ======================= -->
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    th, td {
+        border: 2px solid black;
+        padding: 8px;
+    }
+</style>
+
+</body>
+</html>

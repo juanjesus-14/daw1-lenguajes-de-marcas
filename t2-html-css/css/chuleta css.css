@@ -1,0 +1,60 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* GENERAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* CONTENEDOR */
+#contenedor {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* TITULOS */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* MENÚ (editar si tu HTML lo tiene) */
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    background: #eee;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    width: 20%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* COLUMNA (si tienes estructuras de dos columnas) */
+.col {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .col {
+        width: 100%;
+        float: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+}

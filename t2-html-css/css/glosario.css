@@ -1,0 +1,407 @@
+🟩 GLOSARIO CSS (de lo más fácil a lo más difícil)
+🔹 Nivel Básico
+1. Selectores
+
+Selector de etiqueta: p, h1, div
+
+Selector de clase: .miClase
+
+Selector de id: #miId
+
+2. Propiedades de texto
+
+font-size, font-family, color, font-weight, text-align, line-height
+
+3. Propiedades de fondo
+
+background-color, background-image, background-size, background-repeat
+
+4. Modelo de caja (Box Model)
+
+margin, padding, border, width, height, box-sizing
+
+5. Display básico
+
+display: block
+
+display: inline
+
+display: inline-block
+
+🔹 Nivel Intermedio
+6. Positioning
+
+position: static, relative, absolute, fixed, sticky
+
+Propiedades: top, left, right, bottom, z-index
+
+7. Selectores avanzados
+
+Selectores descendentes: div p
+
+Selectores de hijo directo: div > p
+
+Selectores de hermanos: p + p, p ~ span
+
+Selectores de atributo: input[type="text"]
+
+8. Pseudoclases
+
+:hover, :focus, :active
+
+:first-child, :last-child, :nth-child()
+
+9. Pseudoelementos
+
+::before, ::after, ::first-letter, ::selection
+
+10. Unidades y medidas
+
+Absolutas: px
+
+Relativas: em, rem, %, vh, vw
+
+Funciones: calc()
+
+11. Transiciones
+
+transition-property
+
+transition-duration
+
+transition-timing-function
+
+🔹 Nivel Avanzado
+12. Animaciones
+
+@keyframes
+
+animation-name
+
+animation-duration
+
+animation-iteration-count
+
+animation-fill-mode
+
+13. Flexbox
+
+Ejes: principal y secundario
+
+Propiedades del contenedor:
+display: flex, flex-direction, justify-content, align-items, flex-wrap
+
+Propiedades de los ítems:
+flex-grow, flex-shrink, flex-basis, align-self
+
+14. Grid Layout
+
+display: grid
+
+Definición de filas y columnas: grid-template-columns, grid-template-rows
+
+Áreas: grid-area, grid-template-areas
+
+Alineación avanzada: justify-items, align-content
+
+15. Variables CSS (Custom properties)
+
+Declaración: --mi-color: red;
+
+Uso: color: var(--mi-color);
+
+16. Funciones avanzadas
+
+clamp()
+
+min(), max()
+
+repeat()
+
+minmax()
+
+🔹 Nivel Experto
+17. Responsive Design
+
+Media queries:
+@media (max-width: 768px) { ... }
+
+Diseño fluido y mobile-first
+
+18. CSS para accesibilidad
+
+prefers-reduced-motion
+
+prefers-color-scheme
+
+19. Arquitectura CSS
+
+BEM (Block Element Modifier)
+
+OOCSS
+
+SMACSS
+
+20. CSS Houdini (muy avanzado)
+
+paintWorklet
+
+Propiedades registradas: CSS.registerProperty()
+
+Si quieres, puedo convertir este glosario en PDF, hacer una versión resumida, o añadir ejemplos prácticos. ¿Quieres ampliarlo?
+
+Tú dijiste:
+pero a la vez dime que hace 
+ChatGPT Plus
+
+¡Perfecto! Aquí tienes el glosario de CSS ordenado por dificultad y con explicación de qué hace cada cosa.
+Lo dejo claro, corto y directo, para que sea fácil de estudiar.
+
+🟩 GLOSARIO CSS (con explicación y de menor a mayor dificultad)
+🔹 NIVEL BÁSICO
+1. Selectores
+
+Sirven para decirle a CSS qué elementos quieres modificar.
+
+.clase → selecciona elementos con esa clase.
+
+#id → selecciona un elemento único.
+
+p, div → selecciona etiquetas HTML.
+
+2. Propiedades de texto
+
+Controlan cómo se ve el texto.
+
+font-size → tamaño
+
+color → color
+
+font-family → tipografía
+
+text-align → alineación
+
+line-height → espaciado vertical
+
+3. Propiedades de fondo
+
+Modifican el fondo de un elemento.
+
+background-color → color
+
+background-image → imagen
+
+background-size → ajustar imagen
+
+background-repeat → repetir o no la imagen
+
+4. Box Model
+
+Define el espacio que ocupa un elemento.
+
+margin → espacio por fuera
+
+padding → espacio por dentro
+
+border → bordes
+
+box-sizing → cómo calcula el tamaño
+
+5. Display básico
+
+Define el comportamiento del elemento.
+
+block → ocupa toda la línea
+
+inline → ocupa lo justo
+
+inline-block → mezcla de ambos
+
+🔹 NIVEL INTERMEDIO
+6. Positioning
+
+Sirve para mover elementos de forma controlada.
+
+relative → relativo a sí mismo
+
+absolute → relativo al contenedor
+
+fixed → pegado a la pantalla
+
+sticky → se queda fijo al hacer scroll
+
+z-index → orden en profundidad
+
+7. Selectores avanzados
+
+Permiten apuntar a elementos específicos.
+
+div p → todos los p dentro de un div
+
+div > p → solo los hijos directos
+
+p + p → hermano siguiente
+
+input[type="text"] → por atributo
+
+8. Pseudoclases
+
+Estilos según el estado del elemento.
+
+:hover → cuando pasas el ratón
+
+:focus → cuando seleccionas un input
+
+:nth-child() → según posición en su padre
+
+9. Pseudoelementos
+
+Permiten crear contenido extra visual.
+
+::before y ::after → insertar contenido
+
+::first-letter → primera letra
+
+::selection → texto seleccionado
+
+10. Unidades y medidas
+
+Maneras de medir elementos.
+
+px → fijo
+
+em, rem → relativos a texto
+
+% → relativo al padre
+
+vh, vw → tamaño de la pantalla
+
+calc() → hacer cálculos
+
+11. Transiciones
+
+Permiten animar cambios suaves.
+
+transition-duration → duración
+
+transition-timing-function → velocidad curva
+
+Ejemplo: suavizar un hover
+
+🔹 NIVEL AVANZADO
+12. Animaciones
+
+Animaciones completas y personalizadas.
+
+@keyframes → define los pasos
+
+animation-duration → tiempo
+
+animation-iteration-count → repeticiones
+
+13. Flexbox
+
+Sistema para distribuir elementos en fila o columna.
+
+justify-content → alineación horizontal
+
+align-items → vertical
+
+flex-grow → cuánto crece
+
+flex-wrap → saltar de línea
+
+14. CSS Grid
+
+Sistema de cuadrículas avanzado.
+
+grid-template-columns/rows → crear columnas y filas
+
+grid-area → colocar un elemento
+
+grid-template-areas → maquetación visual
+
+15. Variables CSS
+
+Valores reutilizables.
+
+Declarar: --color: red;
+
+Usar: color: var(--color);
+
+16. Funciones avanzadas
+
+clamp() → rango mínimo-máximo
+
+min(), max() → coger el valor más pequeño/grande
+
+repeat() → repetir columnas en grid
+
+minmax() → tamaño flexible en grid
+
+🔹 NIVEL EXPERTO
+17. Responsive Design
+
+Hacer que la web se adapte a pantallas.
+
+@media (max-width: 768px) → estilos para móvil
+
+Diseño mobile-first → empezar por pantallas pequeñas
+
+18. Accesibilidad CSS
+
+Adaptarse a preferencias del usuario.
+
+prefers-color-scheme → modo oscuro
+
+prefers-reduced-motion → reducir animaciones
+
+19. Arquitectura CSS
+
+Formas de organizar código grande.
+
+BEM → metodología de nombres
+
+OOCSS → separar estructura y skin
+
+SMACSS → modularizar estilos
+
+20. CSS Houdini
+
+Nivel muy avanzado.
+Permite extender CSS y crear funciones personalizadas.
+
+CSS.registerProperty() → crear propiedades nuevas
+
+paintWorklet → gráficos generados con JS
+GLOSARIO DE CSS (De fácil a difícil)
+ 1. color – Cambiar el color del texto
+ Sirve para poner el texto de un color. Ejemplo: color: red;
+ 2. font-size – Cambiar el tamaño de la letra
+ Hace la letra más grande o pequeña. Ejemplo: font-size: 20px;
+ 3. background-color – Cambiar el fondo
+ Pone un color detrás del texto. Ejemplo: background-color: yellow;
+ 4. border – Añadir un borde
+ Crea un marco alrededor del elemento. Ejemplo: border: 2px solid black;
+ 5. border-style – Tipo de borde (discontinuo, puntos…)
+ Ejemplo: border-style: dashed;
+ 6. border-width – Grosor del borde
+ Ejemplo: border-width: 5px;
+ 7. border-color – Color del borde
+ Ejemplo: border-color: green;
+ 8. margin – Espacio por fuera de la caja
+ Ejemplo: margin: 20px;
+ 9. padding – Espacio por dentro de la caja
+ Ejemplo: padding: 15px;
+ 10. width / height – Ancho y alto
+ Ejemplo: width: 300px; height: 100px;
+11. text-align – Alinear el texto
+ Ejemplo: text-align: center;
+ 12. display – Comportamiento de la caja
+ Ejemplo: display: block;
+ 13. flexbox – Ordenar elementos fácilmente
+ Ejemplo: display: flex;
+ 14. position – Controlar la posición exacta
+ Ejemplo: position: absolute;
+ 15. animation – Crear animaciones
+ Ejemplo: animation: mover 2s infinite

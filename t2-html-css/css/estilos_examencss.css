@@ -1,0 +1,124 @@
+/* === IMPORTANTE ===
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================= */
+
+/*-- Básico ----------------------------------------------------------*/
+h1,
+h2,
+p {
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   border: none;
+}
+
+/*-- Layout ----------------------------------------------------------*/
+nav,
+main {
+   width: 90%;
+   max-width: 900px;
+   width: expression(document.body.clientWidth > 901? "900px": "auto");
+   margin: 0 auto;
+}
+
+header,
+nav,
+footer {
+   clear: both;
+}
+
+/* === IMPORTANTE ===
+   A partir de aquí, se pueden añadir todos los estilos propios que
+   sean necesarios.
+   ================= */
+
+* {
+   font: Arial, Helvetica, sans-serif;
+   text-align: justify;
+}
+
+h1 {
+   font: 3rem;
+   text-align: center
+}
+
+h2 {
+   font: 2rem;
+   background-color: gray;
+   color: #ffffff;
+   padding-top: 0.2em;
+   padding-bottom: 0.5em;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+   margin-bottom: 0.5em;
+}
+
+.rojo {
+   background-color: crimson;
+}
+
+.azul {
+   background-color: dodgerblue;
+}
+
+p {
+   margin: 1em;
+}
+
+strong {
+   background-color: #ffffff;
+}
+
+header {
+   padding: 1em;
+}
+
+nav {
+   padding: 0.5em;
+   margin-bottom: 0.5em;
+   border-bottom: 3px solid darkgrey;
+}
+
+article {
+   margin-top: 1em;
+   margin-bottom: 1em;
+   padding-bottom: 1em;
+   background-color: lightgray;
+}
+
+footer {
+   margin-top: 1em;
+   padding-top: 1em;
+   border-top: 1px dashed #C5C5C5;
+   font-size: 0.8em;
+   color: #666;
+   text-align: center
+}
+
+img {
+   float: left;
+   width: 100px;
+   margin-top: 0em;
+   margin-bottom: 1em;
+   margin-left: 0em;
+   margin-right: 1em;
+}
+
+a:link {
+   font: bold;
+   color: dodgerblue, ;
+   text-decoration: none;
+   padding: 0.5em;
+}
+
+a:hover {
+   background-color: dodgerblue;
+   color: #FFF;
+}
+
+a:visited {
+   color: #666;
+}
