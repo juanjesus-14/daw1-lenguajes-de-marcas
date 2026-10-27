@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./consulta.xsl"?>
+<clinica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="consulta.xsd">
+    
+    <consulta id="C_502" revision="false">
+        <nombre>Max</nombre>
+        <especie>Perro</especie>
+        <edad>5</edad>
+        <fecha>2024-05-20</fecha>
+        
+        <procedimientos>
+            <tarea>
+                <descripcion>Vacuna Rabia</descripcion>
+                <precio>35.50</precio>
+            </tarea>
+            <tarea>
+                <descripcion>Desparasitación</descripcion>
+                <precio>15.00</precio>
+            </tarea>
+        </procedimientos>
+        
+        <prioridad>media</prioridad>
+    </consulta>
+    
+    <consulta id="C_503" revision="true">
+        <nombre>Luna</nombre>
+        <especie>Gato</especie>
+        <edad>2</edad>
+        <fecha>2024-05-21</fecha>
+        
+        <procedimientos>
+            <tarea>
+                <descripcion>Limpieza de oídos</descripcion>
+                <precio>20.00</precio>
+            </tarea>
+        </procedimientos>
+        
+        <prioridad>baja</prioridad>
+    </consulta>
+    
+</clinica>

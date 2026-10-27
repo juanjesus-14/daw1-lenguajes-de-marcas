@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definimos el esquema XSD -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz del XML -->
+    <xs:element name="clinica">
+
+        <!-- complexType = el elemento contiene otros elementos -->
+        <xs:complexType>
+
+            <!-- sequence = el orden de los elementos importa -->
+            <xs:sequence>
+
+                <!-- Puede existir una o muchas consultas -->
+                <xs:element name="consulta" maxOccurs="unbounded">
+
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <!-- ========================= -->
+                            <!-- DATOS DE LA MASCOTA -->
+                            <!-- ========================= -->
+
+                            <!-- Texto -->
+                            <xs:element name="nombre" type="xs:string"/>
+
+                            <!-- Texto -->
+                            <xs:element name="especie" type="xs:string"/>
+
+                            <!-- Edad numérica -->
+                            <xs:element name="edad">
+
+                                <!-- simpleType = restricciones -->
+                                <xs:simpleType>
+
+                                    <!-- Restricción sobre integer -->
+                                    <xs:restriction base="xs:integer">
+
+                                        <!-- Valor mínimo permitido -->
+                                        <xs:minInclusive value="0"/>
+
+                                        <!-- Valor máximo permitido -->
+                                        <xs:maxInclusive value="100"/>
+
+                                    </xs:restriction>
+
+                                </xs:simpleType>
+
+                            </xs:element>
+
+                            <!-- Fecha formato YYYY-MM-DD -->
+                            <xs:element name="fecha" type="xs:date"/>
+
+                            <!-- ========================= -->
+                            <!-- CONTENEDOR DE PROCEDIMIENTOS -->
+                            <!-- ========================= -->
+
+                            <xs:element name="procedimientos">
+
+                                <xs:complexType>
+
+                                    <xs:sequence>
+
+                                        <!-- Puede haber muchas tareas -->
+                                        <xs:element name="tarea" maxOccurs="unbounded">
+
+                                            <xs:complexType>
+
+                                                <xs:sequence>
+
+                                                    <!-- Descripción de la tarea -->
+                                                    <xs:element name="descripcion"
+                                                                type="xs:string"/>
+
+                                                    <!-- Precio decimal -->
+                                                    <xs:element name="precio"
+                                                                type="xs:decimal"/>
+
+                                                </xs:sequence>
+
+                                            </xs:complexType>
+
+                                        </xs:element>
+
+                                    </xs:sequence>
+
+                                </xs:complexType>
+
+                            </xs:element>
+
+                            <!-- ========================= -->
+                            <!-- PRIORIDAD -->
+                            <!-- ========================= -->
+
+                            <xs:element name="prioridad">
+
+                                <xs:simpleType>
+
+                                    <!-- Solo permite estos valores -->
+                                    <xs:restriction base="xs:string">
+
+                                        <xs:enumeration value="baja"/>
+                                        <xs:enumeration value="media"/>
+                                        <xs:enumeration value="alta"/>
+
+                                    </xs:restriction>
+
+                                </xs:simpleType>
+
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <!-- ========================= -->
+                        <!-- ATRIBUTOS -->
+                        <!-- ========================= -->
+
+                        <!-- ID obligatorio y único -->
+                        <xs:attribute name="id"
+                                      type="xs:ID"
+                                      use="required"/>
+
+                        <!-- true o false -->
+                        <xs:attribute name="revision"
+                                      type="xs:boolean"
+                                      use="optional"/>
+
+                    </xs:complexType>
+
+                </xs:element>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

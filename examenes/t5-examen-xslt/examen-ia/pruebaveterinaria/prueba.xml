@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="prueba.xsl"?>
+
+<prueba>
+
+    <consulta revision="no">
+
+        <codigo>C_502</codigo>
+
+        <mascota tipo="Perro">Max</mascota>
+
+        <edad>5</edad>
+
+        <fecha>2024-05-20</fecha>
+
+        <prioridad>media</prioridad>
+
+        <procedimientos>
+
+            <procedimiento>
+                <descripcion>Vacuna Rabia</descripcion>
+                <precio>35.50</precio>
+            </procedimiento>
+
+            <procedimiento>
+                <descripcion>Desparasitación</descripcion>
+                <precio>15.00</precio>
+            </procedimiento>
+
+        </procedimientos>
+
+    </consulta>
+
+    <consulta revision="si">
+
+        <codigo>C_503</codigo>
+
+        <mascota tipo="Gato">Luna</mascota>
+
+        <edad>2</edad>
+
+        <fecha>2024-05-21</fecha>
+
+        <prioridad>baja</prioridad>
+
+        <procedimientos>
+
+            <procedimiento>
+                <descripcion>Limpieza de oídos</descripcion>
+                <precio>20.00</precio>
+            </procedimiento>
+
+        </procedimientos>
+
+    </consulta>
+
+</prueba>

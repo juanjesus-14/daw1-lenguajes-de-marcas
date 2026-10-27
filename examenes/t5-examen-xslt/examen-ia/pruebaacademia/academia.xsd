@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="academia">
+
+    <xs:complexType>
+
+        <xs:sequence>
+
+            <xs:element name="curso" maxOccurs="unbounded">
+
+                <xs:complexType>
+
+                    <xs:sequence>
+
+                        <xs:element name="codigo" type="xs:string"/>
+
+                        <xs:element name="profesor" type="xs:string"/>
+
+                        <xs:element name="alumnos">
+
+                            <xs:simpleType>
+
+                                <xs:restriction base="xs:integer">
+
+                                    <xs:minInclusive value="1"/>
+
+                                    <xs:maxInclusive value="40"/>
+
+                                </xs:restriction>
+
+                            </xs:simpleType>
+
+                        </xs:element>
+
+                        <xs:element name="fecha" type="xs:date"/>
+
+                        <xs:element name="nivel">
+
+                            <xs:simpleType>
+
+                                <xs:restriction base="xs:string">
+
+                                    <xs:enumeration value="bajo"/>
+
+                                    <xs:enumeration value="medio"/>
+
+                                    <xs:enumeration value="alto"/>
+
+                                </xs:restriction>
+
+                            </xs:simpleType>
+
+                        </xs:element>
+
+                        <xs:element name="asignaturas">
+
+                            <xs:complexType>
+
+                                <xs:sequence>
+
+                                    <xs:element name="asignatura" maxOccurs="unbounded">
+
+                                        <xs:complexType>
+
+                                            <xs:sequence>
+
+                                                <xs:element name="nombre" type="xs:string"/>
+
+                                                <xs:element name="nota" type="xs:decimal"/>
+
+                                            </xs:sequence>
+
+                                        </xs:complexType>
+
+                                    </xs:element>
+
+                                </xs:sequence>
+
+                            </xs:complexType>
+
+                        </xs:element>
+
+                    </xs:sequence>
+
+                    <xs:attribute name="destacado" type="xs:string"/>
+
+                </xs:complexType>
+
+            </xs:element>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+</xs:element>
+
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<academia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="academia.xsd">
+    
+    <matriculas cod="M_001" beca="true">
+
+        <nombre>Juan</nombre>
+        
+        <nivel>Medio</nivel>
+        
+        <horas_estudio>100</horas_estudio>
+        
+        <fecha_inicio>2026-05-13</fecha_inicio>
+        
+        <modulos>
+            
+            <asignatura>
+                
+                <denominacion>BBDD</denominacion>
+                
+                <creditos>20.5</creditos>
+                
+            </asignatura>
+            
+        </modulos>
+        
+        <modalidad>mixta</modalidad>
+        
+    </matriculas>
+    
+</academia>

@@ -1,0 +1,62 @@
+.revision {
+    border-top: 20px rgb(255, 196, 0) solid;
+}
+
+div {
+    border-top: 20px rgb(16, 185, 24) solid;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    padding-top: 0;
+}
+
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+.alta {
+    color: red;
+    font-weight: 700;
+}
+
+.media {
+    color: orange;
+    font-weight: 600;
+}
+
+.baja {
+    color: green;
+    font-weight: 600;
+}
+
+.prioridad {
+    text-align: right;
+}
+
+table {
+    padding: 5px;
+}
+
+th {
+    color:rgb(99, 99, 99);
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(233, 233, 233);
+    border-bottom: 1px rgb(194, 194, 194) solid;
+}
+
+td {
+    padding-right: 25px;
+    border-bottom: 1px rgb(194, 194, 194) solid;
+    padding-left: 25px;
+}
+
+.precio {
+    font-weight: 600;
+    color: green;
+}
+bold{
+    font-weight: 600;
+}
+

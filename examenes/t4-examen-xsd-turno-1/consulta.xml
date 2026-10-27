@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Conectamos el XML con el XSD -->
+<clinica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="consulta.xsd">
+
+    <!-- Consulta veterinaria -->
+    <consulta id="C_502" revision="true">
+
+        <!-- ========================= -->
+        <!-- DATOS DE LA MASCOTA -->
+        <!-- ========================= -->
+
+        <nombre>Max</nombre>
+
+        <especie>Perro</especie>
+
+        <!-- Número entre 0 y 100 -->
+        <edad>5</edad>
+
+        <!-- Fecha válida -->
+        <fecha>2026-05-12</fecha>
+
+        <!-- ========================= -->
+        <!-- PROCEDIMIENTOS -->
+        <!-- ========================= -->
+
+        <procedimientos>
+
+            <!-- Primera tarea -->
+            <tarea>
+
+                <descripcion>Vacuna Rabia</descripcion>
+
+                <precio>35.50</precio>
+
+            </tarea>
+
+            <!-- Segunda tarea -->
+            <tarea>
+
+                <descripcion>Desparasitacion</descripcion>
+
+                <precio>20.00</precio>
+
+            </tarea>
+
+        </procedimientos>
+
+        <!-- ========================= -->
+        <!-- PRIORIDAD -->
+        <!-- ========================= -->
+
+        <!-- Solo puede ser:
+             baja / media / alta -->
+
+        <prioridad>media</prioridad>
+
+    </consulta>
+
+</clinica>

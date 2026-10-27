@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="academia.xsl"?>
+
+<academia>
+    
+    <curso destacado="si">
+        
+        <codigo>DAW1</codigo>
+        
+        <profesor>Antonio García</profesor>
+        
+        <alumnos>30</alumnos>
+        
+        <fecha>2026-05-27</fecha>
+        
+        <nivel>medio</nivel>
+        
+        <asignaturas>
+            
+            <asignatura>
+                
+                <nombre>Lenguaje de Marcas</nombre>
+                
+                <nota>8.5</nota>
+                
+            </asignatura>
+            
+            <asignatura>
+                
+                <nombre>Bases de Datos</nombre>
+                
+                <nota>7.2</nota>
+                
+            </asignatura>
+            
+        </asignaturas>
+        
+    </curso>
+    
+    <curso destacado="no">
+        
+        <codigo>ASIR1</codigo>
+        
+        <profesor>María López</profesor>
+        
+        <alumnos>25</alumnos>
+        
+        <fecha>2026-05-28</fecha>
+        
+        <nivel>alto</nivel>
+        
+        <asignaturas>
+            
+            <asignatura>
+                
+                <nombre>Redes</nombre>
+                
+                <nota>9.1</nota> 
+                
+            </asignatura>
+            
+        </asignaturas>
+        
+    </curso>
+    
+</academia>

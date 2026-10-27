@@ -1,0 +1,62 @@
+body{
+    background: black;
+    margin:0;
+    padding:30px;
+}
+
+h1 {
+    color: #d39819;
+    text-align: center;
+}
+
+.actualizacion{
+        color: #d39819;
+        text-align: right;
+}
+
+table{
+    width:100%;
+    color: white;
+}
+
+th{
+    background-color:#6e7077;
+    color: #d39819;
+    padding:8px;
+    font-weight:bold;
+
+}
+
+td{
+    padding:8px;
+    background-color:#404144;
+}
+
+td .cancelado{
+    padding:8px;
+    background-color:#eca5a5;
+}
+
+.actualizacion {
+        color: #7a7974;
+}
+
+.cancelado{
+    color:red;
+    font-weight:bold;
+}
+
+.embarcado{
+    color:green;
+    font-weight:bold;
+}
+
+.en_hora{
+    color:blue;
+    font-weight:bold;
+}
+
+.retraso{
+    color:orange;
+    font-weight:bold;
+}

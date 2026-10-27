@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="academia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="matriculas" maxOccurs="unbounded">
+                    <xs:complexType>
+                        
+                        <xs:sequence>
+                                                       
+                            <xs:element name="nombre" type="xs:string"/> 
+                            
+                            <xs:element name="nivel" type="xs:string"/>
+
+                            <xs:element name="horas_estudio">                              
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1"/>                                   
+                                        <xs:maxInclusive value="200"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="fecha_inicio" type="xs:date"/>
+
+                            <xs:element name="modulos">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="asignatura" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="denominacion"
+                                                                type="xs:string"/>
+                                                    <xs:element name="creditos"
+                                                                type="xs:decimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="modalidad">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="presencial"/>
+                                        <xs:enumeration value="online"/>
+                                        <xs:enumeration value="mixta"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute name="cod"
+                                      type="xs:ID"
+                                      use="required"/>
+
+                        <xs:attribute name="beca"
+                                      type="xs:boolean"
+                                      use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
