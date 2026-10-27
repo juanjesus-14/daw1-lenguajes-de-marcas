@@ -1,0 +1,222 @@
+GUION PARA APROBAR EL EXAMEN XML + XSD (1º DAW)
+
+========================================================
+1. ESTRUCTURA BASICA XSD
+========================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="empresa">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>
+
+--------------------------------------------------------
+QUE SIGNIFICA
+--------------------------------------------------------
+
+schema       -> inicio del XSD
+element      -> elemento XML
+complexType  -> contiene elementos dentro
+sequence     -> el orden importa
+
+
+========================================================
+2. ELEMENTOS MAS USADOS
+========================================================
+
+TEXTO
+
+<xs:element name="nombre" type="xs:string"/>
+
+NUMERO
+
+<xs:element name="edad" type="xs:integer"/>
+
+DECIMAL
+
+<xs:element name="precio" type="xs:decimal"/>
+
+FECHA
+
+<xs:element name="fecha" type="xs:date"/>
+
+BOOLEAN
+
+<xs:element name="activo" type="xs:boolean"/>
+
+
+========================================================
+3. ENUMERATION
+========================================================
+
+Sirve para permitir SOLO ciertos valores.
+
+<xs:element name="prioridad">
+
+    <xs:simpleType>
+
+        <xs:restriction base="xs:string">
+
+            <xs:enumeration value="alta"/>
+            <xs:enumeration value="media"/>
+            <xs:enumeration value="baja"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+</xs:element>
+
+SOLO PERMITE:
+- alta
+- media
+- baja
+
+
+========================================================
+4. RESTRICCIONES NUMERICAS
+========================================================
+
+<xs:element name="edad">
+
+    <xs:simpleType>
+
+        <xs:restriction base="xs:integer">
+
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+</xs:element>
+
+SOLO PERMITE NUMEROS ENTRE 0 Y 100
+
+
+========================================================
+5. ATRIBUTOS
+========================================================
+
+OBLIGATORIO
+
+<xs:attribute name="id"
+              type="xs:ID"
+              use="required"/>
+
+OPCIONAL
+
+<xs:attribute name="revision"
+              type="xs:boolean"
+              use="optional"/>
+
+
+========================================================
+6. ELEMENTOS REPETIDOS
+========================================================
+
+maxOccurs="unbounded"
+
+SIGNIFICA:
+Puede haber muchos elementos.
+
+
+========================================================
+7. XML CONECTADO AL XSD
+========================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="empresa.xsd">
+
+    <nombre>Juan</nombre>
+    <edad>20</edad>
+
+</empresa>
+
+
+========================================================
+8. TIPOS IMPORTANTES
+========================================================
+
+xs:string   -> texto
+xs:integer  -> numero entero
+xs:decimal  -> decimal
+xs:boolean  -> true / false
+xs:date     -> fecha
+xs:ID       -> identificador unico
+
+
+========================================================
+9. ERRORES TIPICOS
+========================================================
+
+ERROR 1 -> ORDEN INCORRECTO
+
+SI EL XSD DICE:
+
+<nombre/>
+<edad/>
+
+NO PUEDES PONER:
+
+<edad/>
+<nombre/>
+
+
+ERROR 2 -> TIPO INCORRECTO
+
+<edad>hola</edad>
+
+SI ES INTEGER DA ERROR.
+
+
+ERROR 3 -> ENUMERATION
+
+SI SOLO EXISTE:
+- alta
+- media
+- baja
+
+ESTO FALLA:
+
+<prioridad>normal</prioridad>
+
+
+ERROR 4 -> ATRIBUTO REQUIRED
+
+SI FALTA UN ATRIBUTO OBLIGATORIO DA ERROR.
+
+
+========================================================
+10. CONSEJOS PARA EL EXAMEN
+========================================================
+
+1. Haz primero:
+   - schema
+   - element
+   - complexType
+   - sequence
+
+2. Luego añade elementos.
+
+3. Después restricciones.
+
+4. Haz el XML copiando EXACTAMENTE el orden.
+
+5. Usa los ejercicios anteriores como plantilla.
+

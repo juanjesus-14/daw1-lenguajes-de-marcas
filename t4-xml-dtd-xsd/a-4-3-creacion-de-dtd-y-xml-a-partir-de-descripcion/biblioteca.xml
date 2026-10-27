@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+
+<biblioteca>
+
+    <libros>
+        <libro id="l1" categoria="novela">
+            <titulo>Libro1</titulo>
+            <autor>Autor1</autor>
+            <anio>2020</anio>
+            <editorial>Planeta</editorial>
+        </libro>
+
+        <libro id="l2">
+            <titulo>Libro2</titulo>
+            <autor>Autor2</autor>
+            <autor>Autor3</autor>
+            <anio>2018</anio>
+            <editorial>Anaya</editorial>
+        </libro>
+
+        <libro id="l3">
+            <titulo>Libro3</titulo>
+            <autor>Autor4</autor>
+            <anio>2022</anio>
+            <editorial>SM</editorial>
+        </libro>
+    </libros>
+
+    <usuarios>
+        <usuario id="u1" tipo="estudiante">
+            <nombre>Juan</nombre>
+            <apellidos>Pérez</apellidos>
+            <email>juan@email.com</email>
+        </usuario>
+
+        <usuario id="u2">
+            <nombre>Ana</nombre>
+            <apellidos>López</apellidos>
+            <email>ana@email.com</email>
+        </usuario>
+    </usuarios>
+
+    <prestamos>
+        <prestamo id="p1" usuario="u1">
+            <fechaInicio>2025-04-01</fechaInicio>
+            <libroRef ref="l1"/>
+        </prestamo>
+
+        <prestamo id="p2" usuario="u2">
+            <fechaInicio>2025-04-10</fechaInicio>
+            <fechaDevolucion>2025-04-20</fechaDevolucion>
+            <libroRef ref="l2"/>
+            <libroRef ref="l3"/>
+        </prestamo>
+    </prestamos>
+
+</biblioteca>

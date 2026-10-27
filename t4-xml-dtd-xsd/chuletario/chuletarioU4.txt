@@ -1,0 +1,324 @@
+<!-- ====================================================== -->
+<!-- =============== CHULETA XML + XSD 1ºDAW ============== -->
+<!-- ====================================================== -->
+
+<!-- ====================================================== -->
+<!-- 1. ESTRUCTURA BÁSICA XSD -->
+<!-- ====================================================== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- ELEMENTO RAÍZ -->
+    <xs:element name="empresa">
+
+        <!-- complexType = tiene elementos dentro -->
+        <xs:complexType>
+
+            <!-- sequence = orden obligatorio -->
+            <xs:sequence>
+
+                <!-- TEXTO -->
+                <xs:element name="nombre" type="xs:string"/>
+
+                <!-- NÚMERO ENTERO -->
+                <xs:element name="edad" type="xs:integer"/>
+
+                <!-- DECIMAL -->
+                <xs:element name="precio" type="xs:decimal"/>
+
+                <!-- FECHA -->
+                <xs:element name="fecha" type="xs:date"/>
+
+                <!-- BOOLEAN -->
+                <xs:element name="activo" type="xs:boolean"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>
+
+
+
+<!-- ====================================================== -->
+<!-- 2. XML CONECTADO AL XSD -->
+<!-- ====================================================== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="empresa.xsd">
+
+    <nombre>Juan</nombre>
+    <edad>20</edad>
+    <precio>15.5</precio>
+    <fecha>2026-05-13</fecha>
+    <activo>true</activo>
+
+</empresa>
+
+
+
+<!-- ====================================================== -->
+<!-- 3. ATRIBUTOS -->
+<!-- ====================================================== -->
+
+<!-- Atributo obligatorio -->
+
+<xs:attribute name="id" type="xs:ID" use="required"/>
+
+<!-- Atributo opcional -->
+
+<xs:attribute name="estado" type="xs:string" use="optional"/>
+
+
+
+<!-- ====================================================== -->
+<!-- 4. ENUMERATION -->
+<!-- SOLO PERMITE ESOS VALORES -->
+<!-- ====================================================== -->
+
+<xs:element name="prioridad">
+
+    <xs:simpleType>
+
+        <xs:restriction base="xs:string">
+
+            <xs:enumeration value="alta"/>
+            <xs:enumeration value="media"/>
+            <xs:enumeration value="baja"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+</xs:element>
+
+
+
+<!-- ====================================================== -->
+<!-- 5. RESTRICCIÓN NUMÉRICA -->
+<!-- ====================================================== -->
+
+<xs:element name="nota">
+
+    <xs:simpleType>
+
+        <xs:restriction base="xs:integer">
+
+            <!-- mínimo -->
+            <xs:minInclusive value="0"/>
+
+            <!-- máximo -->
+            <xs:maxInclusive value="10"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+</xs:element>
+
+
+
+<!-- ====================================================== -->
+<!-- 6. ELEMENTOS REPETIDOS -->
+<!-- ====================================================== -->
+
+<!-- unbounded = infinitos -->
+
+<xs:element name="producto" maxOccurs="unbounded">
+
+    <xs:complexType>
+
+        <xs:sequence>
+
+            <xs:element name="nombre" type="xs:string"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+</xs:element>
+
+
+
+<!-- ====================================================== -->
+<!-- 7. ELEMENTO OPCIONAL -->
+<!-- ====================================================== -->
+
+<!-- puede aparecer o no -->
+
+<xs:element name="telefono"
+            type="xs:string"
+            minOccurs="0"/>
+
+
+
+<!-- ====================================================== -->
+<!-- 8. ELEMENTO COMPLEJO COMPLETO -->
+<!-- ====================================================== -->
+
+<xs:element name="alumno">
+
+    <xs:complexType>
+
+        <xs:sequence>
+
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="edad" type="xs:integer"/>
+
+        </xs:sequence>
+
+        <!-- atributo -->
+        <xs:attribute name="id"
+                      type="xs:ID"
+                      use="required"/>
+
+    </xs:complexType>
+
+</xs:element>
+
+
+
+<!-- ====================================================== -->
+<!-- 9. TIPOS MÁS USADOS -->
+<!-- ====================================================== -->
+
+xs:string      --> texto
+xs:integer     --> entero
+xs:decimal     --> decimal
+xs:boolean     --> true / false
+xs:date        --> fecha
+xs:ID          --> identificador único
+
+
+
+<!-- ====================================================== -->
+<!-- 10. ERRORES TÍPICOS DEL EXAMEN -->
+<!-- ====================================================== -->
+
+<!-- ❌ ORDEN INCORRECTO -->
+
+<!-- SI EL XSD DICE -->
+
+<nombre/>
+<edad/>
+
+<!-- NO PUEDES PONER -->
+
+<edad/>
+<nombre/>
+
+
+
+<!-- ❌ TIPO INCORRECTO -->
+
+<!-- SI ES integer -->
+
+<edad>hola</edad>
+
+<!-- DA ERROR -->
+
+
+
+<!-- ❌ ENUMERATION -->
+
+<!-- SI SOLO EXISTE -->
+
+alta
+media
+baja
+
+<!-- ESTO FALLA -->
+
+<prioridad>normal</prioridad>
+
+
+
+<!-- ❌ FALTA UN ATRIBUTO REQUIRED -->
+
+<!-- SI PIDE id -->
+
+<alumno>
+
+<!-- FALLA -->
+
+
+
+<!-- ====================================================== -->
+<!-- 11. PLANTILLA RÁPIDA PARA COPIAR -->
+<!-- ====================================================== -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="raiz">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="nombre" type="xs:string"/>
+
+                <xs:element name="numero">
+
+                    <xs:simpleType>
+
+                        <xs:restriction base="xs:integer">
+
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="100"/>
+
+                        </xs:restriction>
+
+                    </xs:simpleType>
+
+                </xs:element>
+
+                <xs:element name="tipo">
+
+                    <xs:simpleType>
+
+                        <xs:restriction base="xs:string">
+
+                            <xs:enumeration value="A"/>
+                            <xs:enumeration value="B"/>
+                            <xs:enumeration value="C"/>
+
+                        </xs:restriction>
+
+                    </xs:simpleType>
+
+                </xs:element>
+
+            </xs:sequence>
+
+            <xs:attribute name="id"
+                          type="xs:ID"
+                          use="required"/>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>
+
+
+
+<!-- ====================================================== -->
+<!-- 12. CONSEJO FINAL -->
+<!-- ====================================================== -->
+
+<!--
+1. HAZ PRIMERO LA ESTRUCTURA
+2. LUEGO LOS ELEMENTOS
+3. DESPUÉS LAS RESTRICCIONES
+4. FINALMENTE EL XML
+
+SIEMPRE RESPETA EL ORDEN DEL XSD
+-->

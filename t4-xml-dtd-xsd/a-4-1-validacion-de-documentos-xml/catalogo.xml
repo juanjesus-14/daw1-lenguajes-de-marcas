@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+
+<catalogo>
+     <pelicula id="t1">
+        <titulo>Torrente, el brazo tonto de la ley</titulo>
+        <director>Santiago Segura</director>
+        <anio>1998</anio>
+        <genero>Comedia</genero>
+        <duracion>97</duracion>
+        <actores>
+            <actor>Santiago Segura</actor>
+            <actor>Javier Cámara</actor>
+        </actores>
+    </pelicula>
+
+    <pelicula id="t2">
+        <titulo>Torrente 2: Misión en Marbella</titulo>
+        <director>Santiago Segura</director>
+        <anio>2001</anio>
+        <genero>Comedia</genero>
+        <duracion>99</duracion>
+    </pelicula>
+
+    <pelicula id="t3">
+        <titulo>Torrente 3: El protector</titulo>
+        <director>Santiago Segura</director>
+        <anio>2005</anio>
+        <genero>Comedia</genero>
+        <duracion>91</duracion>
+        <actores>
+            <actor>Santiago Segura</actor>
+            <actor>José Mota</actor>
+        </actores>
+    </pelicula>
+
+</catalogo>

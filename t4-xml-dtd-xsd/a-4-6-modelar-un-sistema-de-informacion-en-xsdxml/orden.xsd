@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="taller">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="orden" maxOccurs="unbounded">
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <!--> Vehículo -->
+                            <xs:element name="marca" type="xs:string"/>
+                            <xs:element name="modelo" type="xs:string"/>
+
+                            <xs:element name="anio">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1900"/>
+                                        <xs:maxInclusive value="2026"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <!-- Fecha -->
+                            <xs:element name="fecha" type="xs:date"/>
+
+                            <!-- Servicios -->
+                            <xs:element name="servicios">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="item" maxOccurs="unbounded">
+                                            <xs:complexType>
+
+                                                <xs:sequence>
+                                                    <xs:element name="descripcion" type="xs:string"/>
+                                                    <xs:element name="coste" type="xs:decimal"/>
+                                                </xs:sequence>
+
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <!-- Estado -->
+                            <xs:element name="estado">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="pendiente"/>
+                                        <xs:enumeration value="en_proceso"/>
+                                        <xs:enumeration value="finalizado"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <!-- Atributos -->
+                        <xs:attribute name="numero" type="xs:ID" use="required"/>
+                        <xs:attribute name="urgente" type="xs:boolean" use="optional"/>
+
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
