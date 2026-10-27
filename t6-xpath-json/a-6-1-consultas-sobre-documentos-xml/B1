@@ -1,0 +1,6 @@
+for $e in doc("empresa.xml")//empleado
+where xs:date($e/fecha_ingreso) > xs:date("2020-01-01")
+return
+<empleado>
+{ $e/* }
+</empleado>

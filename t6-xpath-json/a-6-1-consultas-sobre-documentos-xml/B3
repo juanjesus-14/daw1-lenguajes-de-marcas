@@ -1,0 +1,6 @@
+for $d in doc("empresa.xml")//departamento
+let $empleados := doc("empresa.xml")//empleado[@dep = $d/@id]
+return
+<conteo dep="{ $d/nombre/text() }">
+{ count($empleados) }
+</conteo>

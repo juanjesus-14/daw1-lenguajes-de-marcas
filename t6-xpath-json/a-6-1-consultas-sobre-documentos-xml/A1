@@ -1,0 +1,7 @@
+for $e in doc("empresa.xml")//empleado
+where $e/salario > 30000
+order by $e/salario descending
+return
+<resultado>
+{ $e/nombre } - { $e/puesto } (Salario: { data($e/salario) })
+</resultado>

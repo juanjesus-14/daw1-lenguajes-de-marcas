@@ -1,0 +1,8 @@
+for $e in doc("empresa.xml")//empleado
+for $d in doc("empresa.xml")//departamento
+where $e/@dep = $d/@id
+return
+<asignacion>
+<empleado>{$e/nombre/text()}</empleado>
+<area>{$d/nombre/text()}</area>
+</asignacion>

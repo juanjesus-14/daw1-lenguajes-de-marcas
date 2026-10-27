@@ -1,0 +1,7 @@
+let $salarios := doc("empresa.xml")//salario
+return
+<resumen>
+<total_empleados>{ count($salarios) }</total_empleados>
+<gasto_total>{ sum($salarios) }</gasto_total>
+<promedio>{ avg($salarios) }</promedio>
+</resumen>

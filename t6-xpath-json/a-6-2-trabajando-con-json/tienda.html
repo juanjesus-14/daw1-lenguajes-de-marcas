@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TecnoMundo</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.contenedor{
+    width: 500px;
+    margin: 30px auto;
+    background-color: #ececec;
+    padding: 20px;
+}
+
+.producto{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.disponible{
+    color: green;
+}
+
+.agotado{
+    color: red;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="contenedor">
+    <h1 id="titulo"></h1>
+    <div id="productos"></div>
+</div>
+
+<script>
+
+fetch("tienda.json")
+.then(response => response.json())
+.then(datos => {
+
+    document.getElementById("titulo").innerHTML = datos.tienda;
+
+    let salida = "";
+
+    datos.productos.forEach(producto => {
+
+        salida += `
+        <div class="producto">
+            <h2>${producto.nombre}</h2>
+            <p>Precio: ${producto.precio}€</p>
+
+            <p class="${producto.disponible ? 'disponible' : 'agotado'}">
+                Estado:
+                ${producto.disponible ? 'Disponible' : 'Agotado'}
+            </p>
+
+        </div>
+        `;
+
+    });
+
+    document.getElementById("productos").innerHTML = salida;
+
+})
+.catch(error => console.log(error));
+
+</script>
+
+</body>
+</html>

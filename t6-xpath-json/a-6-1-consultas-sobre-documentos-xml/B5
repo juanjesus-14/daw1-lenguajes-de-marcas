@@ -1,0 +1,6 @@
+for $e in doc("empresa.xml")//empleado
+return
+<bonus_empleado>
+<nombre>{ $e/nombre/text() }</nombre>
+<bonus>{ $e/salario * 0.10 }</bonus>
+</bonus_empleado>

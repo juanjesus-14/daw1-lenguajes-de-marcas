@@ -1,0 +1,35 @@
+{
+  "tienda": "TecnoMundo",
+  "productos": [
+    {
+      "nombre": "Laptop Pro",
+      "precio": 1200,
+      "disponible": true
+    },
+    {
+      "nombre": "Mouse Inalámbrico",
+      "precio": 25,
+      "disponible": false
+    },
+    {
+      "nombre": "Teclado Mecánico",
+      "precio": 80,
+      "disponible": true
+    },
+    {
+      "nombre": "Monitor 24 pulgadas",
+      "precio": 180,
+      "disponible": true
+    },
+    {
+      "nombre": "Auriculares Gaming",
+      "precio": 60,
+      "disponible": false
+    },
+    {
+      "nombre": "Disco SSD 1TB",
+      "precio": 95,
+      "disponible": true
+    }
+  ]
+}

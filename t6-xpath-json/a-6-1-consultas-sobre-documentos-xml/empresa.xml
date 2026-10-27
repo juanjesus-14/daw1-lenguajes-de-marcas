@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa>
+  <departamentos>
+    <departamento id="DEP01">
+      <nombre>Tecnología</nombre>
+      <ubicacion>Madrid</ubicacion>
+    </departamento>
+    <departamento id="DEP02">
+      <nombre>Recursos Humanos</nombre>
+      <ubicacion>Barcelona</ubicacion>
+    </departamento>
+    <departamento id="DEP03">
+      <nombre>Marketing</nombre>
+      <ubicacion>Sevilla</ubicacion>
+    </departamento>
+  </departamentos>
+  <empleados>
+    <empleado id="E01" dep="DEP01">
+      <nombre>Ana</nombre>
+      <apellido>García</apellido>
+      <puesto>Desarrolladora Senior</puesto>
+      <salario moneda="EUR">45000</salario>
+      <fecha_ingreso>2018-05-20</fecha_ingreso>
+    </empleado>
+    <empleado id="E02" dep="DEP01">
+      <nombre>Luis</nombre>
+      <apellido>Pérez</apellido>
+      <puesto>Analista de Datos</puesto>
+      <salario moneda="EUR">38000</salario>
+      <fecha_ingreso>2020-11-10</fecha_ingreso>
+    </empleado>
+    <empleado id="E03" dep="DEP02">
+      <nombre>Marta</nombre>
+      <apellido>López</apellido>
+      <puesto>Directora RRHH</puesto>
+      <salario moneda="EUR">55000</salario>
+      <fecha_ingreso>2015-03-12</fecha_ingreso>
+    </empleado>
+    <empleado id="E04" dep="DEP03">
+      <nombre>Juan</nombre>
+      <apellido>Sánchez</apellido>
+      <puesto>Community Manager</puesto>
+      <salario moneda="EUR">28000</salario>
+      <fecha_ingreso>2022-01-15</fecha_ingreso>
+    </empleado>
+  </empleados>
+</empresa>

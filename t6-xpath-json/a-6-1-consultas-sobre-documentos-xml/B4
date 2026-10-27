@@ -1,0 +1,8 @@
+for $e in doc("empresa.xml")//empleado
+return
+<empleado>
+<id_texto>{ data($e/@id) }</id_texto>
+{ $e/nombre }
+{ $e/puesto }
+{ $e/salario }
+</empleado>
