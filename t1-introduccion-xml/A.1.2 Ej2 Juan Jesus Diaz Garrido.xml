@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE alumnos_daw>  
+
+<Ciclo_fotmativo_DAW curso= "15 de septiembre de 2025 y el 30 de junio de 2026">
+	<Lenguaje_de_Marcas_y_Sistemas_de_Gestion_de_Informacion horas_semanales= "4" caracter= "obligatorio">  
+		<Alumnos NIF= "16965696L"> Ana Fernández Gutiérrez </Alumnos>
+			<telefonos>
+				<telefono tipo= "movil"> 789654321 </telefono>
+			</telefonos>
+			<correo> ana.fdezgtrrez@hotmail.com  </correo>
+			<direccion>
+				<calle> El Percebe </calle>
+				<numero> 13 </numero>
+				<ciudad> Santander </ciudad>
+				<cp> 39302 </cp>
+			</direccion>
+
+		<Alumnos NIF= "98765432H">  Pepito Grillo </Alumnos>
+			<telefonos>
+				<telefono tipo= "movil"> 656566555 </telefono>
+			</telefonos>
+			<correo> yhyh@yahoo.com </correo>
+			<direccion>
+				<calle> Avd. El Pez </calle>
+				<numero> 5 </numero>
+				<ciudad> Suances  </ciudad>
+				<cp> 39401 </cp>
+			</direccion>
+			<nota> apto </nota>
+			<faltas_asistencias> 0 </faltas_asistencias>
+	</Lenguaje_de_Marcas_y_Sistemas_de_Gestion_de_Informacion>
+</Ciclo_fotmativo_DAW>

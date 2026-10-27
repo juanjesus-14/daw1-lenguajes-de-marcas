@@ -1,0 +1,10 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda>
+<agenda>
+<nombre>Juan Jesus</nombre>
+<apellido>Díaz Garrido</apellido>
+<direccion>Mi casa</direccion>
+<teléfono>999 88 77 66</teléfono>
+<telefono_movil>666 55 44 33</telefono_movil>
+<telefono_trabajo>666 55 44 33</telefono_trabajo>
+</agenda>
